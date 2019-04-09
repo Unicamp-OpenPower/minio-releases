@@ -5,10 +5,8 @@ language: go
 os: linux-ppc64le
 dist: trusty
 sudo: required
-env:
-  - ARCH=ppc64le
-  - CGO_ENABLED=0
-  - GO111MODULE=on
+env: 
+  - ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
   
 # Enable build cache
 # https://restic.net/blog/2018-09-02/travis-build-cache
