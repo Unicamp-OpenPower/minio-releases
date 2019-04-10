@@ -20,7 +20,7 @@ go: 1.12.1
 
 before_script:
   - wget https://github.com/minio/minio/archive/RELEASE.2019-04-09T01-22-30Z.zip
-  - unzip minio-RELEASE.2019-04-09T01-22-30Z.zip
+  - unzip RELEASE.2019-04-09T01-22-30Z.zip
   - mv RELEASE.2019-04-09T01-22-30Z minio
   - cd minio
   # Add an IPv6 config - see the corresponding Travis issue
