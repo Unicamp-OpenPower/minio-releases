@@ -12,7 +12,7 @@ matrix:
     - env: version=2019-02-06T21-16-36Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
  
 language: go
-go_import_path: github.com/minio/mc
+go_import_path: github.com/minio/minio
 os: linux-ppc64le
 dist: trusty
 sudo: required
