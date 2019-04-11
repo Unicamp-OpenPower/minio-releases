@@ -28,8 +28,7 @@ cache:
 go: 1.12.1
 
 before_script:
-  - go_import_path: github.com/minio/minio
-  - cd github.com/minio/minio
+  - cd /home/travis/gopath
   - wget https://github.com/minio/minio/archive/RELEASE.$version.zip
   - unzip RELEASE.$version.zip
   - mv minio-RELEASE.$version minio
