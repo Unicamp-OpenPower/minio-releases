@@ -28,7 +28,9 @@ cache:
 go: 1.12.1
 
 before_script:
-  - cd /home/travis/gopath/github.com
+  - cd /home/travis/gopath
+  - mkdir github.com
+  - cd github.com
   - mkdir minio
   - cd minio
   - wget https://github.com/minio/minio/archive/RELEASE.$version.zip
