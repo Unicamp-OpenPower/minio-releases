@@ -18,8 +18,6 @@ matrix:
            go_import_path: github.com/minio/minio
     - env: version=2019-02-12T21-58-47Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
            go_import_path: github.com/minio/minio
-    - env: version=2019-02-06T21-16-36Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
-           go_import_path: github.com/minio/minio
 
 language: go
 os: linux-ppc64le
