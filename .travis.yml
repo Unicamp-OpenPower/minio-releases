@@ -13,7 +13,7 @@ matrix:
  
 language: go
 os: linux-ppc64le
-go_import_path: github.com/minio/mc
+go_import_path: github.com/minio/minio
 dist: trusty
 sudo: required
 
