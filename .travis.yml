@@ -25,7 +25,7 @@ language: go
 os: linux-ppc64le
 dist: trusty
 sudo: required
-  
+
 # Enable build cache
 # https://restic.net/blog/2018-09-02/travis-build-cache
 cache:
