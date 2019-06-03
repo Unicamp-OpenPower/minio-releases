@@ -1,21 +1,22 @@
-matrix:
-  include:
-    - env: version=2019-04-04T18-31-46Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
-    - env: version=2019-03-27T22-35-21Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
-    - env: version=2019-03-20T22-38-47Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
-    - env: version=2019-03-13T21-59-47Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
-    - env: version=2019-03-06T22-47-10Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
-    - env: version=2019-02-26T19-51-46Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
-    - env: version=2019-02-20T22-44-29Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
-    - env: version=2019-02-14T00-21-45Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
-    - env: version=2019-02-12T21-58-47Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
-    - env: version=2019-02-06T21-16-36Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
+#matrix:
+#  include:
+#    - env: version=2019-06-01T03-46-14Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
+#    - env: version=2019-03-27T22-35-21Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
+#    - env: version=2019-03-20T22-38-47Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
+#    - env: version=2019-03-13T21-59-47Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
+#    - env: version=2019-03-06T22-47-10Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
+#    - env: version=2019-02-26T19-51-46Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
+#    - env: version=2019-02-20T22-44-29Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
+#    - env: version=2019-02-14T00-21-45Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
+#    - env: version=2019-02-12T21-58-47Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
+#    - env: version=2019-02-06T21-16-36Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
  
 language: go
 
 os: linux-ppc64le
 dist: trusty
 sudo: required
+env: version=2019-06-01T03-46-14Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
 
 # Enable build cache
 # https://restic.net/blog/2018-09-02/travis-build-cache
