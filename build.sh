@@ -1,10 +1,15 @@
-github_version=$(cat github_version.txt)
+github_version=$ver #$(cat github_version.txt)
 ftp_version=$(cat ftp_version.txt)
 del_version=$(cat delete_version.txt)
 
 if [ $github_version != $ftp_version ]
 then
     nvm install 11.10.1
+    cd /home/travis/gopath
+    mkdir github.com
+    cd github.com
+    mkdir minio
+    cd minio
     wget https://github.com/minio/minio/archive/RELEASE.$github_version.zip
     unzip RELEASE.$github_version.zip
     mv minio-RELEASE.$github_version minio
@@ -16,8 +21,8 @@ then
     if [[ $github_version > $ftp_version ]]
     then
         lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/minio/latest minio-$github_version"
-        lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; rm /ppc64el/minio/latest/minio-$ftp_version" 
+        #lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; rm /ppc64el/minio/latest/minio-$ftp_version" 
     fi
     lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/minio minio-$github_version"
-    lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; rm /ppc64el/minio/minio-$del_version" 
+    #lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; rm /ppc64el/minio/minio-$del_version" 
 fi
