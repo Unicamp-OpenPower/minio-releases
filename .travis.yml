@@ -1,15 +1,15 @@
 matrix:
   include:
-    - env: ver=RELEASE.2019-06-27T21-13-50Z
-    - env: ver=RELEASE.2019-07-05T21-20-21Z
-#    - env: ver=RELEASE.2019-07-10T00-34-56Z
-#    - env: ver=RELEASE.2019-07-17T22-54-12Z
-#    - env: ver=RELEASE.2019-07-24T02-02-23Z
-#    - env: ver=RELEASE.2019-07-31T18-57-56Z
-#    - env: ver=RELEASE.2019-08-01T22-18-54Z
-#    - env: ver=RELEASE.2019-08-07T01-59-21Z
-#    - env: ver=RELEASE.2019-08-14T20-37-41Z
-#    - env: ver=RELEASE.2019-08-21T19-40-07Z
+    - env: ver=2019-06-27T21-13-50Z
+    - env: ver=2019-07-05T21-20-21Z
+#    - env: ver=2019-07-10T00-34-56Z
+#    - env: ver=2019-07-17T22-54-12Z
+#    - env: ver=2019-07-24T02-02-23Z
+#    - env: ver=2019-07-31T18-57-56Z
+#    - env: ver=2019-08-01T22-18-54Z
+#    - env: ver=2019-08-07T01-59-21Z
+#    - env: ver=2019-08-14T20-37-41Z
+#    - env: ver=2019-08-21T19-40-07Z
  
 language: go
 
