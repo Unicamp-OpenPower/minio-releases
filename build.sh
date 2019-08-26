@@ -4,7 +4,6 @@ del_version=$(cat delete_version.txt)
 
 if [ $github_version != $ftp_version ]
 then
-    nvm install 11.10.1
     cd /home/travis/gopath
     mkdir github.com
     cd github.com
