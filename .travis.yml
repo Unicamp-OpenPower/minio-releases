@@ -35,7 +35,7 @@ before_script:
 
 before_install:
  - sudo apt install -y lftp
- - if [[ "$TRAVIS_OS_NAME" == "linux-ppc64le" ]]; then nvm install 11.10.1 ; fi
+ - if [[ "$TRAVIS_OS_NAME" == "linux-ppc64le" ]]; then nvm install node ; fi
 
 script:
   - python3 ftp_version.py
