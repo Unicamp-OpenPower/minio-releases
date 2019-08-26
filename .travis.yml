@@ -1,18 +1,5 @@
-matrix:
-  include:
-    - env: ver=2019-07-10T00-34-56Z
-    - env: ver=2019-07-17T22-54-12Z
-    - env: ver=2019-07-24T02-02-23Z
-    - env: ver=2019-07-31T18-57-56Z
-    - env: ver=2019-08-01T22-18-54Z
-    - env: ver=2019-08-07T01-59-21Z
-    - env: ver=2019-08-14T20-37-41Z
-    - env: ver=2019-08-21T19-40-07Z
- 
 language: go
-
 os: linux-ppc64le
-dist: trusty
 sudo: required
 env: version=2019-06-01T03-46-14Z ARCH=ppc64le CGO_ENABLED=0 GO111MODULE=on
 
@@ -24,7 +11,7 @@ cache:
    - $HOME/gopath/pkg/mod
    - $HOME/go/pkg/mod
 
-go: 1.12.1
+go: 1.12.x
 
 before_script:
   # Add an IPv6 config - see the corresponding Travis issue
