@@ -1,8 +1,9 @@
 #github_version=$(cat github_version.txt)
 #ftp_version=$(cat ftp_version.txt)
-github_version=2019-12-30T05-45-39Z
-ftp_version=2019-12-24T23-04-45Z
+github_version=2020-01-03T19-12-21Z
+ftp_version=2019-12-30T05-45-39Z
 del_version=$(cat delete_version.txt)
+
 if [ "$github_version" != "$ftp_version" ]
 then
     cd /home/travis/gopath
@@ -22,7 +23,7 @@ then
     if [[ "$github_version" > "$ftp_version" ]]
     then
         lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/minio/latest minio-$github_version"
-        #lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; rm /ppc64el/minio/latest/minio-$ftp_version" 
+        lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; rm /ppc64el/minio/latest/minio-$ftp_version" 
     fi
     lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/minio minio-$github_version"
     #lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; rm /ppc64el/minio/minio-$del_version" 
