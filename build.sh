@@ -3,8 +3,6 @@ ftp_version=$(cat ftp_version.txt)
 github_version=2019-12-24T23-04-45Z
 #ftp_version=
 del_version=$(cat delete_version.txt)
-echo $github_version
-exit
 if [ "$github_version" != "$ftp_version" ]
 then
     cd /home/travis/gopath
