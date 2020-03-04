@@ -1,13 +1,12 @@
-github_version=$(cat github_version.txt)
+#github_version=$(cat github_version.txt)
 ftp_version=$(cat ftp_version.txt)
-#github_version=
+github_version=2019-12-24T23-04-45Z
 #ftp_version=
 del_version=$(cat delete_version.txt)
 echo $github_version
 exit
 if [ "$github_version" != "$ftp_version" ]
 then
-    $version=$github_version
     cd /home/travis/gopath
     mkdir github.com
     cd github.com
@@ -17,15 +16,17 @@ then
     unzip RELEASE.$github_version.zip
     mv minio-RELEASE.$github_version minio
     cd minio
-    sudo sh -c 'echo 0 > /proc/sys/net/ipv6/conf/all/disable_ipv6'
+    #sudo sh -c 'echo 0 > /proc/sys/net/ipv6/conf/all/disable_ipv6'
     make
+    ls -a
+    exit
     mv minio minio-$github_version
     
     if [[ "$github_version" > "$ftp_version" ]]
     then
         lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/minio/latest minio-$github_version"
-        lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; rm /ppc64el/minio/latest/minio-$ftp_version" 
+        #lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; rm /ppc64el/minio/latest/minio-$ftp_version" 
     fi
     lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/minio minio-$github_version"
-    lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; rm /ppc64el/minio/minio-$del_version" 
+    #lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; rm /ppc64el/minio/minio-$del_version" 
 fi
