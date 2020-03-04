@@ -16,8 +16,7 @@ then
     cd minio
     #sudo sh -c 'echo 0 > /proc/sys/net/ipv6/conf/all/disable_ipv6'
     make
-    ls -a
-    exit
+    ./minio
     mv minio minio-$github_version
     
     if [[ "$github_version" > "$ftp_version" ]]
