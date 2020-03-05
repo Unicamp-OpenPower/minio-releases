@@ -1,6 +1,6 @@
 #github_version=$(cat github_version.txt)
 #ftp_version=$(cat ftp_version.txt)
-github_version=2020-01-25T02-50-51Z
+github_version=2020-02-07T04-56-50Z
 #ftp_version=2019-12-30T05-45-39Z
 del_version=$(cat delete_version.txt)
 
