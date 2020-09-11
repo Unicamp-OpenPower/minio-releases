@@ -34,6 +34,7 @@ before_script:
 script:
   - python3 ftp_version.py
   - bash build.sh
+  - release.sh
 
 notifications:
   slack:
