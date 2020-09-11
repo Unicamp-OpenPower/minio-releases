@@ -20,11 +20,6 @@ fi
 
 if [[ $github_version > $ftp_version ]]
    then
-        sudo lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/minio/latest/ $LOCALPATH/minio/out/minio_$github_version"
-        sudo lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; rm /ppc64el/minio/latest/minio_$del_version"
         lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O $REPO1 $LOCALPATH/minio/out/minio-$github_version-ppc64le.deb"
         sudo lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O $REPO2 $ROOTPATH/minio-$github_version-1.ppc64le.rpm"
-    fi
-    sudo lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/minio/ $LOCALPATH/minio/out/minio_$github_version"
-    sudo lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; rm /ppc64el/minio/minio_$del_version"
 fi
