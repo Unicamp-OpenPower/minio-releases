@@ -12,7 +12,7 @@ file = open('github_version.txt', 'w')
 file.writelines(github_version)
 file.close()
 
-
+print(github_version2)
 f = open('github_version2.txt', 'w')
 f.writelines(github_version2)
 f.close()
