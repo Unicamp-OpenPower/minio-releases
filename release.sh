@@ -16,7 +16,7 @@ if [ "$github_version" != "$ftp_version" ]
     sudo mv empacotar-rpm.sh  $LOCALPATH
     cd  $LOCALPATH
     sudo ./empacotar-deb.sh minio minio-$github_version $github_version " "
-    sudo ./empacotar-rpm.sh minio minio-$github_version $echo"${github_version//-/$'.'}" " " "MinIO is a High Performance Object Storage released under Apache License v2.0. It is API compatible with Amazon S3 cloud storage service. Use MinIO to build high performance infrastructure for machine learning, analytics and application data workloads."
+    sudo ./empacotar-rpm.sh minio minio-$github_version $echo"${github_version//-/$'.'}" " " "High Performance, Kubernetes Native Object Storage."
 fi
 
 if [[ $github_version != $ftp_version ]]
