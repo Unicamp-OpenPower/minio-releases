@@ -5,9 +5,17 @@ html = str(
     .content)
 index = html.find('commits')
 github_version = html[index + 16:index + 36]
+# vai trocar o caracter "-" pelo caracter "." . EX: 2020-09-10T22-02-45Z -> 2020.09.10T22.02.45Z  
+github_version2=github_version.replace("-",".")
+
 file = open('github_version.txt', 'w')
 file.writelines(github_version)
 file.close()
+
+
+f = open('github_version2.txt', 'w')
+f.writelines(github_version2)
+f.close()
 
 # find and save the current Bazel version on FTP server
 html = str(
