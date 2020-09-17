@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 github_version=$(cat github_version.txt)
+github_version_2=$(cat github_version2.txt)
 ftp_version=$(cat ftp_version.txt)
 ROOTPATH="~/rpmbuild/RPMS/ppc64le"
 LOCALPATH="/home/travis/gopath/github.com/minio/minio"
@@ -16,7 +17,7 @@ if [ "$github_version" != "$ftp_version" ]
     sudo mv empacotar-rpm.sh  $LOCALPATH
     cd  $LOCALPATH
     sudo ./empacotar-deb.sh minio minio-$github_version $github_version " "
-    sudo ./empacotar-rpm.sh minio minio-$github_version $echo"${github_version//-/$'.'}" " " "High Performance, Kubernetes Native Object Storage."
+    sudo ./empacotar-rpm.sh minio minio-$github_version $github_version_2 " " "High Performance, Kubernetes Native Object Storage."
 fi
 
 if [[ $github_version != $ftp_version ]]
