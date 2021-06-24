@@ -3,8 +3,8 @@ import requests
 html = str(
     requests.get('https://github.com/minio/minio/releases/latest')
     .content)
-index = html.find('commits')
-github_version = html[index + 16:index + 36]
+index = html.find('RELEASE.')
+github_version = html[index + 8:index + 28]
 # vai trocar o caracter "-" pelo caracter "." . EX: 2020-09-10T22-02-45Z -> 2020.09.10T22.02.45Z  
 github_version2=github_version.replace("-",".")
 
