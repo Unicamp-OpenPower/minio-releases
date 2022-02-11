@@ -20,7 +20,7 @@ cache:
    - $HOME/gopath/pkg/mod
    - $HOME/go/pkg/mod
 
-go: 1.16.x
+go: 1.17.x
 
 before_install:
   - sudo apt install -y lftp
